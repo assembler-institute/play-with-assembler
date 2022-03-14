@@ -1,0 +1,165 @@
+.hidden-section {
+  display: none;
+}
+
+.main-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.main-container {
+  width: 75%;
+  height: 50%;
+  margin-left: 2rem;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 4px 2px 12px -1px rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+
+@media (max-width: 1360px) {
+  .main-container {
+    margin-left: 0;
+  }
+}
+
+.username-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.username-container__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.start-btn {
+  margin-top: 1rem;
+}
+
+.username-container__label {
+  margin-bottom: 0.25rem;
+}
+
+.username-container__input {
+  padding: 0.5rem;
+}
+
+.username-container__input:focus {
+  border: 2px solid black;
+}
+
+.game__timer {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+}
+
+@media (max-width: 900px) {
+  .game__timer {
+    position: inherit;
+  }
+}
+
+.replay {
+  position: absolute;
+  right: 1rem;
+  bottom: 2rem;
+  background-color: #e5f3fe;
+}
+
+.game__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game__title {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.game__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 5rem;
+  height: 5rem;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+.card-content {
+  font-size: 2rem;
+  pointer-events: none;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.game__cheer {
+  text-align: center;
+}
+
+.gameover__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameover__text {
+  text-align: center;
+}
+
+.gameover__username {
+  font-weight: bold;
+}
