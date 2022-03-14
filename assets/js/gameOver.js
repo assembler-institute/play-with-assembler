@@ -1,5 +1,6 @@
 import { handleUsername } from "./utils/handleUsername.js";
 import { getScore } from "./utils/getScore.js"
+import { sortRanking } from "./utils/sortRanking.js"
 import { createNewRanking } from "./utils/createNewRanking.js"
 
 export const finishGame = function() {
@@ -15,6 +16,8 @@ export const finishGame = function() {
   document.getElementById("gameOverScore").textContent = score
 
   inscribeScore(username, score)
+
+  sortRanking({name: username, score: score})
 
   document.getElementById("replay-finished").addEventListener("click", function() {location.reload()})
 }

@@ -1,14 +1,14 @@
 export const scores = [
   {
     name: "Alex",
-    score: 11
+    score: 19
   },
   {
     name: "Ana",
-    score: 13
+    score: 24
   },
   {
     name: "Andrew",
-    score: 25
+    score: 38
   }
 ]
