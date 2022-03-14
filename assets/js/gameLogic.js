@@ -3,8 +3,10 @@ import { getRandomCheer } from "./utils/getRandomCheer.js"
 
 export const evaluateMove = function(e) {
   if (document.querySelectorAll(".active").length <= 2) {
+    if (e.target.className.includes("active")) return // We avoid any interaction with a card already in play
+    
     e.target.classList.add("active")
-    e.target.classList.toggle("flip")
+    e.target.classList.add("flip")
   }
 
   const activeCards = document.querySelectorAll(".active")
@@ -46,7 +48,7 @@ export const evaluateMove = function(e) {
       // WE ADD A LITTLE DELAY FOR USER TO ACTUALLY SEE THE FLIPPED CARD
       activeCards.forEach(card => {
         card.classList.remove("active")
-        card.classList.toggle("flip")
+        card.classList.remove("flip")
       })
     }, flipCardDelay)
   }
