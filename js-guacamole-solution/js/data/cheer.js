@@ -1,0 +1,1 @@
+export const cheer = ["Try again!", "C'mon, you got this!", "You almost got it, try again!", "It's not easy, but you can do this!", "I trust you, keep on trying!"]

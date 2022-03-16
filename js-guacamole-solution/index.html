@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assembler · Whack A Mole!</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/index.js"></script>
+  </head>
+
+  <body>
+    <div id="mainWrapper" class="main-wrapper">
+      <main id="mainContainer" class="main-container">
+        <section id="usernameContainer" class="username-container">
+          <header>
+            <h1 class="username-container__title">Choose your user name</h1>
+          </header>
+          <article>
+            <form id="usernameForm" class="username-container__form">
+              <label for="username-input" class="username-container__label"
+                >User name</label
+              >
+              <input
+                required
+                type="text"
+                minlength="4"
+                id="usernameInput"
+                name="usernameInput"
+                class="username-container__input"
+              />
+              <button type="submit" class="btn primary-btn start-btn">
+                Start
+              </button>
+            </form>
+          </article>
+        </section>
+
+        <section id="gameContainer" class="hidden-section">
+          <h1>Whack-a-mole!</h1>
+          <div id="score" class="score">Score: 0</div>
+
+          <div class="game">
+            <div class="hole hole1">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole2">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole3">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole4">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole5">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole6">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole7">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole8">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole9">
+              <div class="mole"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="gameOverContainer" class="hidden-section">
+          <p class="gameover__text">
+            Congratulations,
+            <span id="gameOverUsername" class="gameover__username"></span>! 🎉
+            You finished the game.
+          </p>
+          <p>Your score: <span id="gameOverScore">-</span> , well done!</p>
+          <button id="replay-finished" class="btn replay">
+            Reload game &#8634;
+          </button>
+        </section>
+      </main>
+
+      <aside id="scoreContainer" class="score-container">
+        <header>
+          <h2>User Scores</h2>
+        </header>
+        <article id="scoreRanking" class="score-container__scores"></article>
+      </aside>
+    </div>
+  </body>
+</html>

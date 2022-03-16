@@ -1,0 +1,25 @@
+.score-container {
+  flex-grow: 1;
+  /* height: 50%; */
+  padding-left: 2rem;
+  margin: 0 2rem;
+  background-color: #fff;
+  box-shadow: 4px 2px 12px -1px rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+
+.score-container__scores {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1360px) {
+  .score-container__scores {
+    flex-direction: row;
+    gap: 1rem
+  }
+}
+
+.score__title {
+  font-weight: bold;
+}

@@ -1,0 +1,177 @@
+.hidden-section {
+  display: none;
+}
+
+.main-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.main-container {
+  width: 75%;
+  height: 75%;
+  margin-left: 2rem;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 4px 2px 12px -1px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+@media (max-width: 1360px) {
+  .main-container {
+    margin-left: 0;
+  }
+}
+
+.username-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.username-container__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.start-btn {
+  margin-top: 1rem;
+}
+
+.username-container__label {
+  margin-bottom: 0.25rem;
+}
+
+.username-container__input {
+  padding: 0.5rem;
+}
+
+.username-container__input:focus {
+  border: 2px solid black;
+}
+
+.game__timer {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+}
+
+@media (max-width: 900px) {
+  .game__timer {
+    position: inherit;
+  }
+}
+
+.replay {
+  position: absolute;
+  right: 1rem;
+  bottom: 2rem;
+  background-color: #e5f3fe;
+}
+
+.game__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game__title {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.game__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.game__cheer {
+  text-align: center;
+}
+
+.gameover__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameover__text {
+  text-align: center;
+}
+
+.gameover__username {
+  font-weight: bold;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+
+  background-color: #f3e6e8;
+  background-image: linear-gradient(315deg, #f3e6e8 0%, #d5d0e5 74%);
+  /*background: url("../background.png") bottom center no-repeat;*/
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.game {
+  width: 800px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url("../hole.png") bottom center no-repeat;
+  background-size: contain;
+  content: "";
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background: url("../mole.png") bottom center no-repeat;
+  background-size: 50%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.hole.up .mole {
+  top: 0;
+}
+
+.username-container__title {
+  text-align: center;
+}
