@@ -3,7 +3,7 @@ import { createRanking } from "./createRanking.js"
 
 export const sortRanking = function(newUser) {
   scores.push(newUser)
-  scores.sort(function(a, b) {if (a.score < b.score) {return -1}})
+  scores.sort(function(a, b) {if (a.score > b.score) {return -1}})
   console.log(scores);
   const rankingContainer = document.getElementById("scoreRanking")
   rankingContainer.innerText = ""
