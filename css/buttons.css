@@ -1,0 +1,40 @@
+.keyboard-container button {
+  width: 4rem;
+  height: 5rem;
+  border-radius: 0.25rem;
+  background-color: #fafafa;
+  color: #333;
+  font-size: 1.75rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.keyboard-container button:nth-child(27) {
+  width: 9rem;
+}
+
+.keyboard-container button:nth-child(28) {
+  width: 9rem;
+}
+
+.btn {
+  width: auto;
+  height: 3rem;
+}
+
+.primary-btn {
+  background-color: var(--secondary-color);
+  color: var(--black);
+}
+
+.start-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 2.25rem;
+  margin-top: 1.25rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assembler · Memory game</title>
-  <link rel="stylesheet" href="./assets/css/styles.css">
-  <link rel="icon" href="./favicon.svg">
-  <script type="module" src="assets/js/index.js"></script>
-</head>
-
-<body>
-  <div id="mainWrapper" class="main-wrapper">
-    <main id="mainContainer" class="main-container">
-      <section id="usernameContainer" class="username-container">
-        <header>
-          <h1 class="username-container__title">Choose your user name</h1>
-        </header>
-        <article>
-          <form id="usernameForm" class="username-container__form">
-            <label for="username-input" class="username-container__label">User name</label>
-            <input required type="text" minlength="4" id="usernameInput" name="usernameInput"
-              class="username-container__input">
-            <button type="submit" class="btn primary-btn start-btn">Start</button>
-          </form>
-        </article>
-      </section>
-      <section id="gameContainer" class="hidden-section">
-        <div id="gameTimer" class="game__timer">Score: 0 seconds</div>
-        <h2 class="game__title" 2>Find the cards with the same emoji</h2>
-        <article id="gameTable" class="game__table">
-          <div id="gameGrid" class="game__grid"></div>
-          <h3 id="gameCheer" class="game__cheer"></h3>
-        </article>
-        <button id="replay" class="btn replay">Reload game &#8634;</button>
-      </section>
-      <section id="gameOverContainer" class="hidden-section">
-        <p class="gameover__text">Congratulations,
-          <span id="gameOverUsername" class="gameover__username"></span>! 🎉 You finished the game.
-        </p>
-        <p>Your score: <span id="gameOverScore">-</span> seconds, well done!</p>
-        <button id="replay-finished" class="btn replay">Reload game &#8634;</button>
-      </section>
-    </main>
-    <aside id="scoreContainer" class="score-container">
-      <header>
-        <h2>User Scores</h2>
-      </header>
-      <article id="scoreRanking" class="score-container__scores"></article>
-    </aside>
-  </div>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle</title>
+    <link rel="icon" href="./images/favicon.png" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <div id="main-content">
+      <main class="wordle-container">
+        <div id="page1">
+          <section id="userNameGenerator" class="username-container">
+            <header class="title-container__page1">
+              <h1>Let´s wordle❗️</h1>
+            </header>
+            <article>
+              <form id="userNameForm" class="username-container__form">
+                <label for="userName">Insert your name:</label>
+                <input
+                  type="text"
+                  id="userName"
+                  name="userName"
+                  class="username-container__forminput"
+                  minlength="2"
+                  placeholder="Nick required"
+                  required
+                />
+                <button
+                  type="submit"
+                  id="startGame"
+                  class="btn primary-btn start-game"
+                >
+                  Start Game 🦖
+                </button>
+              </form>
+            </article>
+          </section>
+        </div>
+        <section id="page2">
+          <h2 class="title-container">Wordle</h2>
+          <div id="timer" class="timer">Score: 0 seconds</div>
+          <article class="message-container"></article>
+          <article class="game-grid"></article>
+          <article class="keyboard-container"></article>
+          <button id="replay" class="btn replay">Reload game &#8634;</button>
+        </section>
+        <section id="page3">
+          <div class="summary-container">
+            <span id="messageEnd" class="message-end"></span>
+          </div>
+          <header>
+            <h2 class="title-container">Ranking</h2>
+          </header>
+          <article id="rankingList" class="ranking-container__list"></article>
+          <button id="endReplay" class="btn replay">Play Again</button>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>

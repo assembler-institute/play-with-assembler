@@ -1,0 +1,20 @@
+.cell.turn {
+  animation: 0.5s linear turning;
+}
+
+@keyframes turning {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}

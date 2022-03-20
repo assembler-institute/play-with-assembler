@@ -1,0 +1,89 @@
+@media screen and (max-width: 1000px) {
+  .title-container__page1 {
+    width: 100% !important;
+  }
+
+  .username-container {
+    display: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  .game-grid {
+    width: 90vw;
+    height: auto;
+  }
+  .keyboard-container {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    width: fit-content !important;
+  }
+
+  .title-container__page1 {
+    display: flex !important;
+    justify-content: left !important;
+    font-size: 2rem !important;
+  }
+
+  .username-container {
+    margin-left: 1rem !important;
+  }
+
+  .wordle-container {
+    position: absolute !important;
+    width: fit-content !important;
+    height: auto !important;
+    justify-self: space-between !important;
+  }
+
+  .title-container {
+    width: 100% !important;
+  }
+  .game-grid {
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .keyboard-container {
+    width: 100%;
+  }
+  .game-grid .cell {
+    width: 3rem !important;
+    height: 3rem !important;
+    font-size: 1.5rem !important;
+  }
+  .keyboard-container {
+    margin: 1rem !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .keyboard-key {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+
+  .keyboard-container button:nth-child(27) {
+    width: 5rem !important;
+  }
+
+  .keyboard-container button:nth-child(28) {
+    width: 5rem !important;
+  }
+
+  .keyboard-container button {
+    font-size: 1rem !important;
+  }
+
+  .replay {
+    position: fixed !important;
+    width: auto;
+    height: auto !important;
+    font-size: 1.5rem !important;
+  }
+}
