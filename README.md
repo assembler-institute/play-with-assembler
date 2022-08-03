@@ -7,9 +7,8 @@ Let´s put into practice what we have learnt so far by developing a game with HT
 - [Goals](#goals)
 - [Introduction](#introduction)
 - [Develop a game](#develop-a-game)
-- [Deployment (optional)](#deployment-optional)
-- [Technologies used](#technologies-used)
-- [Project delivery](#project-delivery)
+- [Requirements](#requirements)
+- [Deliverables](#deliverables)
 - [Resources](#resources)
 
 ## Goals
